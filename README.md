@@ -7,7 +7,7 @@ Successfully running on Raspberry Pi Zero 2W and multiple x86 machines (Dell Ven
 
 Installation:
 
-1. Install dependencies: hcidump, hcitool, curl. Make sure HA is running ble_monitor component (available via HACS)
+1. Install dependencies: hcidump, hcitool, curl, rfkill. Make sure HA is running ble_monitor component (available via HACS)
 2. Modify script settings to match HA address, port, token (long-lived admin token, can be generated in HA user settings) and change hci adapter name if required
 3. Add MACs of ble devices to the script as variables (check examples). For each device add hcitool lewladd line to the end of script (check "hcitool lewladd $MAC0" line).
 Purpose of whitelisting MACs is to prevent high CPU load and unnecessary network traffic due to processing all broadcasting devices in range.
